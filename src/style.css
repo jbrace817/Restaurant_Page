@@ -7,7 +7,9 @@
 }
 
 body {
+  position: relative;
   font-family: "Poppins", sans-serif;
+  height: 100vh;
 }
 
 .navbar {
@@ -40,6 +42,80 @@ nav ul {
 
 nav ul.active {
   border-bottom: 2px solid red;
+}
+
+.mainContent {
+  height: calc(100vh - 48px);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  /* border: 1px solid red; */
+}
+
+.outerWord {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  width: 470px;
+  margin-top: 100px;
+  /* margin-left: 200px; */
+  /* border: 1px solid red; */
+  grid-column: 1/ 2;
+  grid-row: 1 / 2;
+}
+
+img.word {
+  width: 219px;
+  height: 396px;
+
+  /* border: 1px solid red; */
+}
+
+.text {
+  display: flex;
+  margin-left: 126px;
+  align-items: center;
+  width: 470px;
+  height: 240;
+  /* border: 1px solid red; */
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+img.plate {
+  /* width: 735px; */
+  width: 1040px;
+  margin-right: 121px;
+  /* border: 1px solid red; */
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  /* justify-self: start; */
+  align-self: center;
+}
+
+.outerCircle {
+  position: absolute;
+  /* border: 1px solid red; */
+  width: 880px;
+  height: 800px;
+  overflow: hidden;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.circle {
+  width: 880px;
+  height: 880px;
+  background-color: hsla(0, 81%, 49%, 0.48);
+  border-radius: 50%;
+  position: absolute;
+  right: -40%;
+  bottom: -45%;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 @media screen and (max-width: 576px) {
