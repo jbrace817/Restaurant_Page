@@ -1,4 +1,5 @@
 import { showHomepage, hideHomepage } from "./homepage";
+import { showMenu } from "./menu";
 
 const body = document.body;
 const navbar = document.createElement("div");
@@ -16,11 +17,11 @@ export default function () {
   home.innerText = "Home";
   menu.innerText = "Menu";
   contact.innerText = "Contact";
-  body.append(showHomepage());
+  body.append(showHomepage()); //change to homepage.
   navElement.appendChild(home);
-  home.classList.add("active");
   navElement.appendChild(menu);
   navElement.appendChild(contact);
+  home.classList.add("active");
   home.addEventListener("click", () => {
     home.classList.add("active");
     menu.classList.remove("active");
@@ -32,6 +33,7 @@ export default function () {
     home.classList.remove("active");
     contact.classList.remove("active");
     body.append(hideHomepage());
+    body.append(showMenu());
   });
   contact.addEventListener("click", () => {
     contact.classList.add("active");
