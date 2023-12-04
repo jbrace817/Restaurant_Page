@@ -135,6 +135,7 @@ img.plate {
   position: relative;
   border: 1px solid #000000;
   width: 392px;
+  background-color: #fff;
 }
 
 .menuItem header {
@@ -144,6 +145,7 @@ img.plate {
 
 .menuItem hr {
   border: 1px solid #ff0000;
+  width: 90%;
   z-index: -1;
 }
 
