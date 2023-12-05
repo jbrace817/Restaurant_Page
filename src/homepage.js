@@ -29,14 +29,18 @@ textParagraph.textContent =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eaque, dolorem laboriosam consequuntur perspiciatisplaceat. Porro doloremque nulla eos, quaerat nemo temporibus id eligendi laborum tempora laudantium. Quo, numquam. Possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facere voluptatem beatae,repellendus, veniam blanditiis";
 
 export function showHomepage() {
+  //Offset of navbar
+  let offset = navBar().offsetHeight;
+  //elements
   hmMainContent.classList.remove("hidden");
   outerWord.appendChild(wordSushi);
   textContainer.appendChild(textParagraph);
   hmMainContent.appendChild(plate);
   hmMainContent.appendChild(outerWord);
   hmMainContent.appendChild(textContainer);
-  hmMainContent.style.height = `calc(100vh - ${navBar().offsetHeight}px)`;
   console.log(navBar().offsetHeight);
+
+  hmMainContent.style.height = "calc(100vh - " + offset + "px)";
 
   return hmMainContent;
 }

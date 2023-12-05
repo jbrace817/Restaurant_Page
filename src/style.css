@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -52,7 +52,7 @@ nav li.active {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .outerWord {
@@ -151,7 +151,7 @@ img.plate {
 
 .menuItem article {
   font-size: 12px;
-  font-weight: 4;
+  font-weight: 300;
   width: 41ch;
 }
 
@@ -160,6 +160,57 @@ img.plate {
   top: 0;
   right: 0px;
   width: 80px;
+}
+
+.contactContainer {
+  width: 528px;
+  height: 588px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: hsla(0, 0%, 100%, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  /* border: 1px solid red; */
+}
+
+.contactContainer header {
+  font-size: 32px;
+  font-weight: 400;
+  text-decoration: underline 2px;
+  text-underline-offset: 5px;
+}
+.visit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+}
+
+.contact a {
+  text-decoration: none;
+  text-decoration-color: none;
+  color: inherit;
+}
+
+.hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
 }
 
 @media screen and (max-width: 576px) {
@@ -182,6 +233,6 @@ img.plate {
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 }

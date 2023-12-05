@@ -13,10 +13,10 @@ export const contact = document.createElement("li");
 export function navBar() {
   navbar.classList.add("navbar");
   restaurantName.innerText = "Sushi Place";
-  navbar.appendChild(restaurantName);
   home.innerText = "Home";
   menu.innerText = "Menu";
   contact.innerText = "Contact";
+  navbar.appendChild(restaurantName);
   navElement.appendChild(navElement_Ul);
   navElement_Ul.appendChild(home);
   navElement_Ul.appendChild(menu);
@@ -24,6 +24,5 @@ export function navBar() {
   home.classList.add("active");
 
   navbar.appendChild(navElement);
-
   return navbar;
 }
