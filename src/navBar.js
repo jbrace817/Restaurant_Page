@@ -1,4 +1,4 @@
-const navbar = document.createElement("div");
+export const navbar = document.createElement("div");
 const restaurantName = document.createElement("h1");
 const navElement = document.createElement("nav");
 const navElement_Ul = document.createElement("ul");

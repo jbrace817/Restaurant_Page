@@ -1,6 +1,6 @@
 import "./style.css";
 import { navBar, home, menu, contact } from "./navBar";
-import { showHomepage, hideHomepage, hmMainContent } from "./homepage";
+import { showHomepage, hideHomepage } from "./homepage";
 import { showContactInfo, hideContactInfo } from "./contact";
 import { showMenu, hideMenu } from "./menu";
 
@@ -14,11 +14,12 @@ circleContainer.appendChild(circle);
 circle.classList.add("circle");
 
 //Navbar
-body.append(navBar());
+body.prepend(navBar());
 
 //Background circle div
 body.append(circleContainer);
-console.log("testing");
+
+//Loads homepage after navbar loads. This has to happen for the offset height for the viewport.
 setTimeout(() => {
   body.append(showHomepage());
 }, 200);

@@ -1,4 +1,4 @@
-import { navBar } from "./navBar";
+import { navbar } from "./navBar";
 import ImgWordForSushi from "./images/sushi_japanese.png";
 import ImgPlateOfSushi from "./images/Component 9.png";
 
@@ -30,7 +30,7 @@ textParagraph.textContent =
 
 export function showHomepage() {
   //Offset of navbar
-  let offset = navBar().offsetHeight;
+  let offset = navbar.offsetHeight;
   //elements
   hmMainContent.classList.remove("hidden");
   outerWord.appendChild(wordSushi);
@@ -38,7 +38,7 @@ export function showHomepage() {
   hmMainContent.appendChild(plate);
   hmMainContent.appendChild(outerWord);
   hmMainContent.appendChild(textContainer);
-  console.log(navBar().offsetHeight);
+  console.log(navbar.offsetHeight);
 
   hmMainContent.style.height = "calc(100vh - " + offset + "px)";
 
