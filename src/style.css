@@ -141,7 +141,6 @@ img.plate {
   right: -45%;
   bottom: -45%;
   background-repeat: no-repeat;
-  background-attachment: scroll;
 }
 
 /* Hides the components */
@@ -396,6 +395,5 @@ img.plate {
     right: -45%;
     bottom: -60%;
     background-repeat: no-repeat;
-    background-attachment: scroll;
   }
 }
