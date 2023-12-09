@@ -12,6 +12,8 @@ body {
   height: 100vh;
 }
 
+/*Navbar styling*/
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -23,6 +25,7 @@ body {
   /* border: 1px solid red; */
   width: 25%;
   text-align: center;
+  font-size: calc(24px + (52 - 24) * ((100vw - 300px) / (3840 - 1600)));
 }
 
 nav {
@@ -41,50 +44,61 @@ nav li {
   border-bottom: 2px;
   padding: 10px 10px 5px 10px;
   cursor: pointer;
+  font-size: calc(10px + (38 - 10) * ((100vw - 300px) / (3840 - 300)));
 }
 
 nav li.active {
   border-bottom: 2px solid red;
 }
 
+/* HomePage Styling */
 .mainContent {
-  /* height: calc(100vh - 48px); */
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  /* border: 1px solid red; */
 }
 
 .outerWord {
   display: flex;
   justify-content: center;
   align-items: end;
-  width: 470px;
+  /* width: 470px; */
+  width: 50%;
   margin-top: 100px;
   grid-column: 1/ 2;
   grid-row: 1 / 2;
+  /* border: 1px solid red; */
 }
 
 img.word {
-  width: 219px;
-  height: 396px;
+  /* width: 219px;
+  height: 396px; */
+  width: 47%;
+  /* height: 100%; */
 
   /* border: 1px solid red; */
 }
 
 .text {
   display: flex;
-  margin-left: 126px;
+  /* margin-left: 126px; */
+  justify-content: center;
   align-items: center;
-  width: 470px;
-  height: 240;
+  /* width: 470px; */
+  /* height: 240; */
+  width: 80%;
   /* border: 1px solid red; */
   grid-column: 1/2;
   grid-row: 2/3;
 }
+.text p {
+  width: 67%;
+  font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (3840 - 1600)));
+}
 
 img.plate {
-  width: 1040px;
+  /* width: 1040px; */
+  width: 90%;
   margin-right: 121px;
   /* border: 1px solid red; */
   grid-column: 2 / 3;
@@ -92,11 +106,15 @@ img.plate {
   align-self: center;
 }
 
+/* Background Circle */
 .outerCircle {
   position: absolute;
   /* border: 1px solid red; */
-  width: 880px;
-  height: 800px;
+  /* width: 880px;
+  height: 800px; */
+  width: 100%;
+  height: 100%;
+
   overflow: hidden;
   right: 0;
   bottom: 0;
@@ -104,19 +122,34 @@ img.plate {
 }
 
 .circle {
-  width: 880px;
-  height: 880px;
-  background-color: hsla(0, 81%, 49%, 0.48);
+  /* width: 880px;
+  height: 880px; */
+  /* width: 90%;
+  height: 100%;
+  border: 1px solid red;
+  background-color: rgba(226, 24, 24, 0.48);
   border-radius: 50%;
+  
+  right: -35%;
+  bottom: -35%; */
   position: absolute;
-  right: -40%;
+  background-image: url("/src/images/Ellipse.png");
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  right: -45%;
   bottom: -45%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
+/* Hides the components */
 .hidden {
   visibility: hidden;
 }
 
+/* Menu Component */
 .menuContainer {
   /* border: 1px solid red; */
   width: 784px;
@@ -162,6 +195,7 @@ img.plate {
   width: 80px;
 }
 
+/* Contact Page component */
 .contactContainer {
   width: 528px;
   height: 588px;
@@ -213,6 +247,7 @@ img.plate {
   font-weight: 300;
 }
 
+/* Mobile Devices */
 @media screen and (max-width: 576px) {
   .navbar {
     flex-direction: column;
@@ -229,10 +264,138 @@ img.plate {
   }
 
   .mainContent {
-    /* height: calc(100vh - 48px); */
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    height: 100dvh;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-columns: none;
     /* border: 1px solid red; */
+  }
+  img.plate {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    width: 85%;
+    margin: auto;
+    margin-bottom: 25%;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-self: center;
+  }
+  .outerWord {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 70%;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* border: 1px solid red; */
+  }
+
+  img.word {
+    width: 100%;
+    /* border: 1px solid red; */
+  }
+
+  .text {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 70%;
+    /* border: 1px solid red; */
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .text p {
+    width: 95%;
+    font-size: 10px;
+  }
+
+  .menuContainer {
+    /* border: 1px solid red; */
+    width: 90%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    gap: 1px;
+  }
+
+  .menuItem {
+    position: relative;
+    border: 1px solid #000000;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .menuItem header {
+    font-weight: 400;
+    font-size: 10px;
+  }
+
+  .menuItem hr {
+    /* border: 1px solid #ff0000; */
+    width: 90%;
+    z-index: -1;
+  }
+
+  .menuItem article {
+    font-size: 6px;
+    font-weight: 300;
+    width: 41ch;
+  }
+
+  .menuItem img {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20%;
+  }
+
+  .contactContainer {
+    width: 80%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: hsla(0, 0%, 100%, 0.7);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    /* border: 1px solid red; */
+  }
+  .outerCircle {
+    position: absolute;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .circle {
+    /* border: 1px solid red; */
+    position: absolute;
+    background-image: url("/src/images/Ellipse.png");
+    background-size: contain;
+    background-position: top;
+    width: 100%;
+    height: 100%;
+    right: -45%;
+    bottom: -60%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
   }
 }

@@ -1,5 +1,5 @@
 import "./style.css";
-import { navBar, home, menu, contact } from "./navBar";
+import { navBar, home, menu, contact, navbar } from "./navBar";
 import { showHomepage, hideHomepage } from "./homepage";
 import { showContactInfo, hideContactInfo } from "./contact";
 import { showMenu, hideMenu } from "./menu";
@@ -7,22 +7,22 @@ import { showMenu, hideMenu } from "./menu";
 //Body
 const body = document.body;
 //Background circle
-const circleContainer = document.createElement("div");
-const circle = document.createElement("div");
-circleContainer.classList.add("outerCircle");
-circleContainer.appendChild(circle);
-circle.classList.add("circle");
+const div_outerCircle = document.createElement("div");
+const div_innerCircle = document.createElement("div");
+div_outerCircle.classList.add("outerCircle");
+div_outerCircle.appendChild(div_innerCircle);
+div_innerCircle.classList.add("circle");
 
 //Navbar
 body.prepend(navBar());
 
 //Background circle div
-body.append(circleContainer);
+body.append(div_outerCircle);
 
 //Loads homepage after navbar loads. This has to happen for the offset height for the viewport.
-setTimeout(() => {
-  body.append(showHomepage());
-}, 200);
+// setTimeout(() => {
+//   body.append(showHomepage());
+// }, 300);
 
 home.addEventListener("click", () => {
   body.append(showHomepage());

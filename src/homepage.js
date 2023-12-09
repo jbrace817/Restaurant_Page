@@ -3,49 +3,55 @@ import ImgWordForSushi from "./images/sushi_japanese.png";
 import ImgPlateOfSushi from "./images/Component 9.png";
 
 //Elements
-export const hmMainContent = document.createElement("div");
+const div_mainContainer = document.createElement("div");
 
-const outerWord = document.createElement("div");
-const textContainer = document.createElement("div");
-const textParagraph = document.createElement("p");
+//Div containing the ImgWordForSushi image
+const div_outerWordForSushi = document.createElement("div");
 
-//Class list of elements
-hmMainContent.classList.add("mainContent");
-outerWord.classList.add("outerWord");
-textContainer.classList.add("text");
+//Hompage Text
+const div_textContainer = document.createElement("div");
+const p_text = document.createElement("p");
+
+//Classnames added to the elements
+div_mainContainer.classList.add("mainContent");
+div_outerWordForSushi.classList.add("outerWord");
+div_textContainer.classList.add("text");
 
 //Images
 const wordSushi = new Image();
 wordSushi.src = ImgWordForSushi;
 wordSushi.alt = 'Japenese caligraphy for the word "sushi"';
 wordSushi.classList.add("word");
+
 const plate = new Image();
 plate.src = ImgPlateOfSushi;
 plate.alt = "Plate of sushi";
 plate.classList.add("plate");
 
 //Paragraph of text
-textParagraph.textContent =
+p_text.textContent =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eaque, dolorem laboriosam consequuntur perspiciatisplaceat. Porro doloremque nulla eos, quaerat nemo temporibus id eligendi laborum tempora laudantium. Quo, numquam. Possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam facere voluptatem beatae,repellendus, veniam blanditiis";
 
+//Function that creates the elements
 export function showHomepage() {
   //Offset of navbar
   let offset = navbar.offsetHeight;
   //elements
-  hmMainContent.classList.remove("hidden");
-  outerWord.appendChild(wordSushi);
-  textContainer.appendChild(textParagraph);
-  hmMainContent.appendChild(plate);
-  hmMainContent.appendChild(outerWord);
-  hmMainContent.appendChild(textContainer);
+  div_mainContainer.classList.remove("hidden");
+  div_outerWordForSushi.appendChild(wordSushi);
+  div_textContainer.appendChild(p_text);
+  div_mainContainer.appendChild(plate);
+  div_mainContainer.appendChild(div_outerWordForSushi);
+  div_mainContainer.appendChild(div_textContainer);
   console.log(navbar.offsetHeight);
 
-  hmMainContent.style.height = "calc(100vh - " + offset + "px)";
+  div_mainContainer.style.height = "calc(100vh - " + offset + "px)";
 
-  return hmMainContent;
+  return div_mainContainer;
 }
 
+//Function to hide elements
 export function hideHomepage() {
-  hmMainContent.classList.add("hidden");
-  return hmMainContent;
+  div_mainContainer.classList.add("hidden");
+  return div_mainContainer;
 }
