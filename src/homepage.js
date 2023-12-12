@@ -45,7 +45,7 @@ export function showHomepage() {
   div_mainContainer.appendChild(div_textContainer);
   console.log(navbar.offsetHeight);
 
-  div_mainContainer.style.height = "calc(100vh - " + offset + "px)";
+  // div_mainContainer.style.height = "calc(100vh - " + offset + "px)";
 
   return div_mainContainer;
 }

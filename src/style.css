@@ -23,6 +23,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-wrap: nowrap;
+  z-index: 1;
 }
 
 .navbar h1 {
