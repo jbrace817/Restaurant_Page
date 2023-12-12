@@ -77,7 +77,10 @@ nav li.active {
 img.word {
   /* width: 219px;
   height: 396px; */
-  width: 47%;
+  /* width: 47%; */
+
+  width: clamp(1.25rem, 0.23071rem + 11.649vw, 28.1875rem);
+
   /* height: 100%; */
 
   /* border: 1px solid red; */
@@ -97,12 +100,15 @@ img.word {
 }
 .text p {
   width: 67%;
-  font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (3840 - 1600)));
+  /* font-size: calc(8px + (20 - 8) * ((100vw - 300px) / (3840 - 1600))); */
+  font-size: clamp(0.5rem, 0.26654rem + 0.983vw, 2.625rem);
+  /* image	140	20	PX	3840	451	PX	img {width: clamp(1.25rem, 0.23071rem + 11.649vw, 28.1875rem);} */
 }
 
 img.plate {
   /* width: 1040px; */
   width: 90%;
+
   /* width: auto; */
   margin-right: 121px;
 
@@ -158,28 +164,31 @@ img.plate {
 /* Menu Component */
 .menuContainer {
   /* border: 1px solid red; */
-  width: 784px;
-  height: 452px;
+  /* width: 90%; */
+  width: clamp(15.75rem, 0rem + 90vw, 216rem);
+  height: 60%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 113px;
+  grid-auto-rows: min-content;
   gap: 1px;
 }
 
 .menuItem {
   position: relative;
   border: 1px solid #000000;
-  width: 392px;
+  width: 100%;
   background-color: #fff;
 }
 
 .menuItem header {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 10px;
+  font-size: clamp(0.25rem, -0.12074rem + 1.561vw, 3.625rem);
+  /* p	380	4	PX	3840	58	PX	p {font-size: clamp(0.25rem, -0.12074rem + 1.561vw, 3.625rem);} */
 }
 
 .menuItem hr {
@@ -189,16 +198,20 @@ img.plate {
 }
 
 .menuItem article {
-  font-size: 12px;
+  /* font-size: 6px; */
+  font-size: clamp(0.25rem, 0.01654rem + 0.983vw, 2.375rem);
+  /* p	380	4	PX	3840	38	PX	p {font-size: clamp(0.25rem, 0.01654rem + 0.983vw, 2.375rem);} */
   font-weight: 300;
-  width: 41ch;
+  width: 80%;
 }
 
 .menuItem img {
   position: absolute;
   top: 0;
   right: 0px;
-  width: 80px;
+  /* width: 15%; */
+  width: clamp(1.25rem, 0.24725rem + 5.73vw, 14rem);
+  /* image	280	20	PX	3840	224	PX	img {width: clamp(1.25rem, 0.24725rem + 5.73vw, 14rem);} */
 }
 
 /* Contact Page component */
@@ -509,7 +522,8 @@ img.plate {
   }
   .text p {
     width: 67%;
-    font-size: calc(8px + (8 - 8) * ((100vw - 300px) / (1600 - 300)));
+    /* font-size: calc(8px + (8 - 8) * ((100vw - 300px) / (1600 - 300))); */
+    font-size: clamp(0.5rem, 0.44514rem + 0.231vw, 1rem);
   }
 
   img.plate {
