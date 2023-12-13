@@ -6,6 +6,7 @@ import { showMenu, hideMenu } from "./menu";
 
 //Body
 const body = document.body;
+
 //Background circle
 const div_outerCircle = document.createElement("div");
 const div_innerCircle = document.createElement("div");
@@ -18,11 +19,6 @@ body.prepend(navBar());
 
 //Background circle div
 body.append(div_outerCircle);
-
-//Loads homepage after navbar loads. This has to happen for the offset height for the viewport.
-// setTimeout(() => {
-//   body.append(showHomepage());
-// }, 300);
 
 home.addEventListener("click", () => {
   body.append(showHomepage());
@@ -48,4 +44,7 @@ contact.addEventListener("click", () => {
   hideHomepage();
   hideMenu();
 });
-document.body.append(showHomepage());
+setTimeout(() => {
+  document.body.append(showHomepage());
+  console.log(navbar.offsetHeight);
+}, 100);

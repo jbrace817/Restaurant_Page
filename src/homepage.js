@@ -43,11 +43,17 @@ export function showHomepage() {
   div_mainContainer.appendChild(plate);
   div_mainContainer.appendChild(div_outerWordForSushi);
   div_mainContainer.appendChild(div_textContainer);
-  console.log(navbar.offsetHeight);
+  console.log(offset);
 
   // div_mainContainer.style.height = "calc(100vh - " + offset + "px)";
-  document.documentElement.style.setProperty("--nav-height", offset);
+  document.documentElement.style.setProperty("--nav-height", `${offset}px`);
 
+  screen.orientation.addEventListener("change", () => {
+    document.documentElement.style.setProperty("--nav-height", `${offset}px`);
+    window.location.reload();
+    console.log(navbar.offsetHeight);
+  });
+  console.log(offset);
   return div_mainContainer;
 }
 

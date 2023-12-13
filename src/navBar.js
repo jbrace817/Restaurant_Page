@@ -30,11 +30,3 @@ export function navBar() {
   navbar.appendChild(nav_element);
   return navbar;
 }
-
-// window.addEventListener("load", () => {
-//   document.body.append(showHomepage());
-// });
-// setTimeout(() => {
-//   document.body.append(showHomepage());
-//   console.log(navbar.offsetHeight);
-// }, 200);
