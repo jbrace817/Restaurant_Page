@@ -48,3 +48,4 @@ contact.addEventListener("click", () => {
   hideHomepage();
   hideMenu();
 });
+document.body.append(showHomepage());
