@@ -34,7 +34,7 @@ export function navBar() {
 // window.addEventListener("load", () => {
 //   document.body.append(showHomepage());
 // });
-setTimeout(() => {
-  document.body.append(showHomepage());
-  console.log(navbar.offsetHeight);
-}, 200);
+// setTimeout(() => {
+//   document.body.append(showHomepage());
+//   console.log(navbar.offsetHeight);
+// }, 200);
