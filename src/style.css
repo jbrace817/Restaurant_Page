@@ -4,6 +4,10 @@
   --nav-height: 65px;
 }
 
+:root {
+  --nav-height: 65px;
+}
+
 * {
   margin: 0;
   padding: 0;
