@@ -34,6 +34,7 @@ module.exports = {
       inject: true,
       chunks: ["index"],
       filename: "index.html",
+      favicon: "./src/images/favicon.ico",
     }),
     new MiniCssExtractPlugin({ filename: "./css/style.[contenthash].css" }),
   ],
